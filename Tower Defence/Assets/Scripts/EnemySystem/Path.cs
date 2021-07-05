@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//需手动放置到挂载在Panel上的battleScene脚本上
 public class Path : MonoBehaviour
 {
     [SerializeField] public List<Transform> nodes;

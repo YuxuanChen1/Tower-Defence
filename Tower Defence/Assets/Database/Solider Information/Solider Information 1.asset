@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af00c4c8f85e4e24787b3f92ab3f541b, type: 3}
+  m_Name: Solider Information 1
+  m_EditorClassIdentifier: 
+  soldierName: 
+  sprite: {fileID: 21300000, guid: 2281b12fcd04c06458a0999ea3e3623c, type: 3}
+  background: {fileID: 0}
+  soldier: {fileID: 4280793487078247046, guid: 797e1e5d32e968b4aa76ab97f643defd, type: 3}
+  gold: 0

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="New EnemyWaveDatabase",menuName ="Enemy/New EnemyWaveDatabase")]
+[CreateAssetMenu(fileName ="New EnemyWaveDatabase",menuName ="Database/Enemy/New EnemyWaveDatabase")]
 [Serializable]
 
 public class EnemyWaveDatabase : ScriptableObject

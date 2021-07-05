@@ -4,6 +4,7 @@
 -a="E:\Unity\Unity\Engineering Training\Tower Defence\Library\PlayerScriptAssemblies\UnityEngine.TestRunner.dll"
 -a="E:\Unity\Unity\Engineering Training\Tower Defence\Library\PlayerScriptAssemblies\Unity.Timeline.dll"
 -a="E:\Unity\Unity\Engineering Training\Tower Defence\Library\PlayerScriptAssemblies\Unity.TextMeshPro.dll"
+-a="E:\Unity\Unity\Engineering Training\Tower Defence\Library\PlayerScriptAssemblies\Unity.InputSystem.dll"
 -a="E:\Unity\Unity\Engineering Training\Tower Defence\Library\PlayerScriptAssemblies\UnityEngine.UI.dll"
 -a="E:\Unity\Unity\Engineering Training\Tower Defence\Library\PlayerScriptAssemblies\Unity.Mathematics.dll"
 -a="E:\Unity\Unity\Engineering Training\Tower Defence\Library\PlayerScriptAssemblies\Unity.2D.IK.Runtime.dll"

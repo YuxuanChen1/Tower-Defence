@@ -7,14 +7,16 @@ TagManager:
   - SoldierSystem
   - Path
   - LayoutArea
+  - Enemy
+  - Soldier
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Soldier
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -43,4 +45,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: LayoutArea
+    uniqueID: 599511333
+    locked: 0
+  - name: Enemy
+    uniqueID: 1738831275
+    locked: 0
+  - name: Soldier
+    uniqueID: 1231308575
     locked: 0

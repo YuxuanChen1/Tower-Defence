@@ -3,8 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+public enum KindOfSoldier
+{
+    close,
+    shoot,
+}
+
 public class LayoutArea : MonoBehaviour
 {
+    [SerializeField] private KindOfSoldier kindOfSoldier;
     [SerializeField] private SoldierSystem soldierSystem;
     [SerializeField] private SoldierInfoDatabase soldierDatabase;
     [SerializeField] private GameObject soldier;
@@ -27,7 +34,7 @@ public class LayoutArea : MonoBehaviour
 
     private void Update()
     {
-        if (!soldierSystem.GetLayoutState() || isOccupied)  //不在放置状态 或者 放置了角色
+        if (!soldierSystem.GetLayoutState() || isOccupied || kindOfSoldier != soldierSystem.GetSoliderDatabase().kind)  //不在放置状态 或者 放置了角色
         {
             sprite.color = new Color(sprite.color.r, sprite.color.g, sprite.color.b, 0f);
         }
@@ -37,7 +44,7 @@ public class LayoutArea : MonoBehaviour
         }
         color_a = sprite.color.a;
 
-        if (!soldierSystem.GetLayoutState() || isOccupied)
+        if (!soldierSystem.GetLayoutState() || isOccupied || kindOfSoldier != soldierSystem.GetSoliderDatabase().kind)
             return;
 
         {
@@ -68,8 +75,16 @@ public class LayoutArea : MonoBehaviour
         Debug.Log("Layout a soldier");
         soldierDatabase = soldierSystem.GetSoliderDatabase();
         soldier = GameObject.Instantiate(soldierDatabase.soldier, this.transform.position, Quaternion.identity);
+        soldier.GetComponent<SoldierController>().Initialize(this);
         isOccupied = true;
 
         soldierSystem.SetState(false, false);
+    }
+
+    public void ResetArea()
+    {
+        soldierDatabase = null;
+        soldier = null;
+        isOccupied = false;
     }
 }

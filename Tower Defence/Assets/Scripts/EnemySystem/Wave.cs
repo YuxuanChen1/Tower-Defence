@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 /// <summary>
@@ -32,15 +33,19 @@ public class Wave
     private int enemyNum; //当前波次敌人编号 
     private int pathIndex;    //当前波次所使用的路径
 
-    public void Initialize()
+    private BattleScene battleScene;//当前脚本的场景控制器
+
+    public void Initialize(BattleScene _battleScene)
     {
         allOver = false;
         waveOver = false;
         enemyNum = 0;
         waveNum = 0;
         existEnemies.Clear();
-        this.paths = null;
-        this.enemyWaveDatabases = null;
+        paths = null;
+        enemyWaveDatabases = null;
+
+        battleScene = _battleScene;
     }
 
     public void WaveUpdate()
@@ -100,7 +105,7 @@ public class Wave
     {
         Vector3 _position = paths[pathIndex].nodes[0].position;
         GameObject _enemy = GameObject.Instantiate(enemyWaveDatabases[waveNum].Enemies[enemyNum], _position, Quaternion.identity);
-        _enemy.GetComponent<EnemyController>().path = paths[_pathIndex];
+        _enemy.GetComponent<EnemyController>().E_Initialize(paths[_pathIndex],battleScene);
         existEnemies.Add(_enemy);
     }
 }

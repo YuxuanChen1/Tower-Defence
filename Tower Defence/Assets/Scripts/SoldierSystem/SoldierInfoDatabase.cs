@@ -6,8 +6,9 @@ using UnityEngine;
 public class SoldierInfoDatabase : ScriptableObject
 {
     public string soldierName;
+    public KindOfSoldier kind;
     public Sprite sprite;
     public Sprite background;
     public GameObject soldier;
-    public int gold;
+    public int cost;
 }

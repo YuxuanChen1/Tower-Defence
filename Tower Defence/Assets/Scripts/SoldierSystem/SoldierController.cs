@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class SoldierController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] protected int damage;
+    [SerializeField] protected Animator anim;
+    [SerializeField] protected LayoutArea layoutArea;
+    public virtual void Initialize(LayoutArea area) 
     {
-        
+        layoutArea = area;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 }

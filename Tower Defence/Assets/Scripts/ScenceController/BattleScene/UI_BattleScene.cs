@@ -9,6 +9,8 @@ public class UI_BattleScene : MonoBehaviour
     private SoldierSystem soldierSystem;
     [Header("金币")]
     [SerializeField] private Text goldText;
+    [Header("游戏血量")]
+    [SerializeField] private Slider gameBloodBar;
     [Header("关卡信息")]
     [SerializeField] private Text levelNum;
     [SerializeField] private Text waveNum;
@@ -41,5 +43,8 @@ public class UI_BattleScene : MonoBehaviour
         goldText.text = soldierSystem.GetGold().ToString();
         waveNum.text = (Wave.Instance.waveNum + 1 <= battleScene._enemyWaveDatabases.Count ? Wave.Instance.waveNum + 1 : battleScene._enemyWaveDatabases.Count).ToString();
         gameTime.text = ((int)battleScene.GetTime()).ToString() + "s";
+        gameBloodBar.value = (float)battleScene.gameBlood / (float)battleScene.defaultGameBlood;
     }
+
+
 }

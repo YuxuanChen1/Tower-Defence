@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Solider Information 3
   m_EditorClassIdentifier: 
   soldierName: 
-  sprite: {fileID: 21300000, guid: d26fafc5c5ddf3345b51de889fb5ae12, type: 3}
+  kind: 0
+  sprite: {fileID: 6344236997622909882, guid: 11c96cc38ceefae4790bc303e2e58a81, type: 3}
   background: {fileID: 0}
-  soldier: {fileID: 4280793487078247046, guid: 797e1e5d32e968b4aa76ab97f643defd, type: 3}
-  gold: 0
+  soldier: {fileID: 8645273385139595626, guid: 6c93e9b4b9709bd48a5b556bc7bdb29a, type: 3}
+  cost: 20

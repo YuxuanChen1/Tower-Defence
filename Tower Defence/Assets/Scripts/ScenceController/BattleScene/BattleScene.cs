@@ -13,8 +13,9 @@ public class BattleScene : MonoBehaviour
     [Tooltip("关卡序号")]
     [SerializeField] private int levelNum;
     private float time; //游戏时间
-    [Header("关卡血量")]
-    private int gameBlood;
+    //[Header("关卡血量")]
+    public int defaultGameBlood { get; set; }
+    public int gameBlood { get; set; }
     [Header("敌人波次信息")]
     [SerializeField] public List<EnemyWaveDatabase> _enemyWaveDatabases;
     [Header("本关路径信息")]
@@ -47,17 +48,18 @@ public class BattleScene : MonoBehaviour
             switch (gameController.difficulity)
             {
                 case Difficulity.easy:
-                    gameBlood = 5;
+                    defaultGameBlood = 5;
                     break;
                 
                 case Difficulity.hard:
-                    gameBlood = 1;
+                    defaultGameBlood = 1;
                     break;
                 case Difficulity.normal:
                 default:
-                    gameBlood = 3;
+                    defaultGameBlood = 3;
                     break;
             }
+            gameBlood = defaultGameBlood;
         }
     }
     void Update()

@@ -56,11 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ScenceController\BattleScene\UI_BattleScene.cs" />
     <Compile Include="Assets\Scripts\SoldierSystem\ShootSoldier.cs" />
     <Compile Include="Assets\Scripts\ScenceController\BattleScene\BattleScene.cs" />
     <Compile Include="Assets\Scripts\SoldierSystem\SoldierInfoDatabase.cs" />
     <Compile Include="Assets\Scripts\ScenceController\BattleScene\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\TimeSpeed.cs" />
     <Compile Include="Assets\Scripts\SoldierSystem\SoldierArea.cs" />
     <Compile Include="Assets\Scripts\SoldierSystem\CloseSoldier.cs" />
     <Compile Include="Assets\Scripts\SoldierSystem\SoldierSystem.cs" />
@@ -73,8 +75,9 @@
     <Compile Include="Assets\Scripts\ScenceController\SettingScene.cs" />
     <Compile Include="Assets\Scripts\EnemySystem\Path.cs" />
     <Compile Include="Assets\Scripts\SoldierSystem\LayoutArea.cs" />
-    <Compile Include="Assets\Scripts\ScenceController\BattleScene\UI_BattleScene.cs" />
-    <Compile Include="Assets\Scripts\TimeSpeed.cs" />
+    <Compile Include="Assets\Scripts\ScenceController\StartScene.cs" />
+    <Compile Include="Assets\Scripts\ScenceController\WinOrLoseScene\LoseScene.cs" />
+    <Compile Include="Assets\Scripts\ScenceController\WinOrLoseScene\WinScene.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

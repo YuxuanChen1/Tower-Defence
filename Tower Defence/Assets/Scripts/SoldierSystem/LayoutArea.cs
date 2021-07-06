@@ -77,7 +77,7 @@ public class LayoutArea : MonoBehaviour
         soldier = GameObject.Instantiate(soldierDatabase.soldier, this.transform.position, Quaternion.identity);
         soldier.GetComponent<SoldierController>().Initialize(this);
         isOccupied = true;
-
+        soldierSystem.CostGold(soldierDatabase.cost);
         soldierSystem.SetState(false, false);
     }
 

@@ -20,7 +20,15 @@ public class SoldierArea : MonoBehaviour
         transform.GetChild(0).GetComponent<Image>().sprite = soldierDatabase.sprite;
     }
 
-    public void ToLayoutState()
+    public void SoldierBtnClicked()
+    {
+        if(_soldierSystem.GetGold() >= soldierDatabase.cost)
+        {
+            ToLayoutState();
+        }
+    }
+
+    private void ToLayoutState()
     {
         if (_soldierSystem.GetDeleteState())
             return;

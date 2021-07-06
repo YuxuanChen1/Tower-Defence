@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SoldierSystem : MonoBehaviour
 {
+    [SerializeField] private int gold;
     [SerializeField] private bool layoutState;
     [SerializeField] private bool deleteState;
     [SerializeField] private SoldierInfoDatabase soldierDatabase;
@@ -60,6 +61,25 @@ public class SoldierSystem : MonoBehaviour
         {
             Debug.LogError("兵营系统：状态设置错误，两种状态不可同时使用");
             return;
+        }
+    }
+
+    public void AddGold(int _gold)
+    {
+        gold += _gold;
+    }
+
+    public int GetGold()
+    {
+        return gold;
+    }
+
+    public void CostGold(int cost)
+    {
+        gold -= cost;
+        if (gold < 0)
+        {
+            Debug.LogError("金币花费错误");
         }
     }
 }

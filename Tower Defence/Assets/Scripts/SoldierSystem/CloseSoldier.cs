@@ -61,7 +61,7 @@ public class CloseSoldier : SoldierController
     {
         for (int i = 0; i < enemiesInRange.Count; i++)
         {
-            if (enemiesInRange[i].GetComponent<EnemyController>().GetHurt(damage))
+            if (enemiesInRange[i] != null && enemiesInRange[i].GetComponent<EnemyController>().GetHurt(damage))
                 enemiesInRange.Remove(enemiesInRange[i]);
         }
     }

@@ -10,17 +10,25 @@ public enum Difficulity
 }
 public class GameController : MonoBehaviour
 {
-    public Difficulity difficulity { get; set; }
+    public Difficulity difficulity;
     public float masterVolume { get; set; }
     public float musicVolume { get; set; }
     public float effectVolume { get; set; }
 
+    private int lastSceneIndex;//用于记录上一关
 
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
     }
 
+    public int GetSceneIndex()
+    {
+        return lastSceneIndex;
+    }
 
-
+    public void SetSceneIndex(int indexOfScene)
+    {
+        lastSceneIndex = indexOfScene;
+    }
 }

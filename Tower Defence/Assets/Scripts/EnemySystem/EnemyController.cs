@@ -33,6 +33,8 @@ public class EnemyController : MonoBehaviour
     [Tooltip("当前目标节点")]
     [SerializeField] private int index = 1;
     [SerializeField] private BattleScene battleScene;
+    [SerializeField] private SoldierSystem soldierSystem;
+    [SerializeField] private GameController gameController;
     private bool hasDeath = false;
 
     public void E_Initialize(Path _path, BattleScene _battleScene)
@@ -41,13 +43,50 @@ public class EnemyController : MonoBehaviour
         float random = UnityEngine.Random.Range(-0.2f, 0.2f);
         rayLength += random;
 
-        blood = maxBlood;
         speed = defaultSpeed;
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         path = _path;
 
-        battleScene = _battleScene;
+        {
+            battleScene = _battleScene;
+            if(battleScene == null)
+            {
+                Debug.LogError("战斗场景传入失败");
+                return;
+            }
+        }
+        
+        {
+            soldierSystem = GameObject.FindGameObjectWithTag("SoldierSystem").GetComponent<SoldierSystem>();
+            if (soldierSystem == null)
+            {
+                Debug.LogError("找不到兵营系统");
+                return;
+            }
+        }
+
+        {
+            gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+            if (gameController == null)
+            {
+                Debug.LogError("找不到游戏控制器");
+                return;
+            }
+
+            switch (gameController.difficulity)
+            {
+                case Difficulity.easy:
+                    maxBlood = (int)(maxBlood * 0.8);
+                    break;
+                case Difficulity.hard:
+                    maxBlood = (int)(maxBlood * 1.1);
+                    break;
+                default:
+                    break;
+            }
+            blood = maxBlood;
+        }
     }
 
     private void Update()
@@ -108,7 +147,7 @@ public class EnemyController : MonoBehaviour
         //该敌人在Wave脚本中出队
         Wave.Instance.existEnemies.Remove(this.gameObject);
         //玩家血量减少
-
+        battleScene.EnemyArrive();
         //销毁敌人
         Destroy(this.gameObject);
     }
@@ -163,7 +202,7 @@ public class EnemyController : MonoBehaviour
             blood = 0;
             if (!hasDeath)
             {
-                battleScene.AddGold(gold);
+                soldierSystem.AddGold(gold);
                 hasDeath = true;
             }
             

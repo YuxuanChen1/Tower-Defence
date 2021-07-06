@@ -521,7 +521,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 584668142}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1991992327}
+        m_TargetAssemblyTypeName: LoseScene, Assembly-CSharp
+        m_MethodName: ToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &584668142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -725,7 +737,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1017122221}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1991992327}
+        m_TargetAssemblyTypeName: WinScene, Assembly-CSharp
+        m_MethodName: NextGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1017122221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -988,7 +1012,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1284294195}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1991992327}
+        m_TargetAssemblyTypeName: LoseScene, Assembly-CSharp
+        m_MethodName: ToChooseScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1284294195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1188,7 +1224,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1902518474}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1991992327}
+        m_TargetAssemblyTypeName: LoseScene, Assembly-CSharp
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1902518474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1238,6 +1286,7 @@ GameObject:
   - component: {fileID: 1991992324}
   - component: {fileID: 1991992326}
   - component: {fileID: 1991992325}
+  - component: {fileID: 1991992327}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1307,6 +1356,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1991992323}
   m_CullTransparentMesh: 1
+--- !u!114 &1991992327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991992323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca5e113208ae2045a600a721d34817c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2146664648
 GameObject:
   m_ObjectHideFlags: 0

@@ -232,7 +232,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.43, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -615,7 +615,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.43, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1603,8 +1603,8 @@ RectTransform:
   m_Father: {fileID: 932388907}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.43, y: 0}
-  m_AnchorMax: {x: 0.43, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2117,7 +2117,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 682593043}
         m_TargetAssemblyTypeName: SoldierArea, Assembly-CSharp
-        m_MethodName: ToLayoutState
+        m_MethodName: SoldierBtnClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2287,8 +2287,8 @@ RectTransform:
   m_Father: {fileID: 1052700519}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.43, y: 0}
-  m_AnchorMax: {x: 0.43, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2348,7 +2348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &797461681
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2422,6 +2422,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d571a938aa12cea4b8c5ad2fc33abb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainVolume: {fileID: 120312156}
+  musicVolume: {fileID: 916702494}
+  effectVolume: {fileID: 697319299}
+  gameController: {fileID: 0}
 --- !u!1 &838709913
 GameObject:
   m_ObjectHideFlags: 0
@@ -3064,7 +3068,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.43, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3292,8 +3296,8 @@ RectTransform:
   m_Father: {fileID: 1109855687}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.43, y: 0}
-  m_AnchorMax: {x: 0.43, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4397,8 +4401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a53671ff8753f7e43a3af45dcc4ce950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNum: 0
-  gold: 0
+  levelNum: 1
   _enemyWaveDatabases:
   - {fileID: 11400000, guid: a7a5c97caa6b38648b72a733d6be1a60, type: 2}
   - {fileID: 11400000, guid: a7a5c97caa6b38648b72a733d6be1a60, type: 2}
@@ -4407,6 +4410,7 @@ MonoBehaviour:
   _paths:
   - {fileID: 1996184290}
   pausePlane: {fileID: 797461680}
+  gameController: {fileID: 0}
 --- !u!114 &1118022470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5361,7 +5365,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1513851026}
         m_TargetAssemblyTypeName: SoldierArea, Assembly-CSharp
-        m_MethodName: ToLayoutState
+        m_MethodName: SoldierBtnClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5768,7 +5772,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1607477438}
         m_TargetAssemblyTypeName: SoldierArea, Assembly-CSharp
-        m_MethodName: ToLayoutState
+        m_MethodName: SoldierBtnClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6934,7 +6938,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1917133244}
         m_TargetAssemblyTypeName: SoldierArea, Assembly-CSharp
-        m_MethodName: ToLayoutState
+        m_MethodName: SoldierBtnClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7474,6 +7478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cce2eacd7ff70b4099e3f04fe60d0b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gold: 20
   layoutState: 0
   deleteState: 0
   soldierDatabase: {fileID: 0}

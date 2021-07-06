@@ -17,4 +17,4 @@ MonoBehaviour:
   sprite: {fileID: 8755083233547346110, guid: a659c3ab158e26a43a45c830713f940a, type: 3}
   background: {fileID: 0}
   soldier: {fileID: 4280793487078247046, guid: 6cd2ab5f2291dbe41a780e47aaae9f47, type: 3}
-  cost: 0
+  cost: 10

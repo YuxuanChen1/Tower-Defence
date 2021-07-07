@@ -13,6 +13,8 @@ public class CloseSoldier : SoldierController
     [SerializeField] private float rayLength;
     [SerializeField] private List<GameObject> enemiesInRange;
 
+    [SerializeField] private AudioSource effectAudioSource;
+
     public override void Initialize(LayoutArea area)
     {
         blood = maxBlood;
@@ -27,6 +29,7 @@ public class CloseSoldier : SoldierController
         bloodBar.value = (float)blood / (float)maxBlood;
 
         AnimSwitch();
+        SoundEffect();
     }
 
     private void AnimSwitch()
@@ -96,5 +99,14 @@ public class CloseSoldier : SoldierController
             yield return new WaitForFixedUpdate();
         }
         Destroy(this.gameObject);
+    }
+
+    protected override void SoundEffect()
+    {
+        effectAudioSource.volume = musicController.masterVolume * musicController.effectVolume;
+    }
+    public void AttackEffect()
+    {
+        effectAudioSource.Play();
     }
 }

@@ -58,11 +58,13 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ScenceController\BattleScene\UI_BattleScene.cs" />
     <Compile Include="Assets\Scripts\SoldierSystem\ShootSoldier.cs" />
+    <Compile Include="Assets\Scripts\ScenceController\WinOrLoseScene\LoseScene.cs" />
     <Compile Include="Assets\Scripts\ScenceController\BattleScene\BattleScene.cs" />
     <Compile Include="Assets\Scripts\SoldierSystem\SoldierInfoDatabase.cs" />
     <Compile Include="Assets\Scripts\ScenceController\BattleScene\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\TimeSpeed.cs" />
+    <Compile Include="Assets\Scripts\ScenceController\WinOrLoseScene\WinScene.cs" />
     <Compile Include="Assets\Scripts\SoldierSystem\SoldierArea.cs" />
     <Compile Include="Assets\Scripts\SoldierSystem\CloseSoldier.cs" />
     <Compile Include="Assets\Scripts\SoldierSystem\SoldierSystem.cs" />
@@ -70,14 +72,13 @@
     <Compile Include="Assets\Scripts\ScenceController\ChooseScene.cs" />
     <Compile Include="Assets\Scripts\EnemySystem\EnemyWaveDatabase.cs" />
     <Compile Include="Assets\Scripts\EnemySystem\Wave.cs" />
+    <Compile Include="Assets\Scripts\ScenceController\StartScene.cs" />
     <Compile Include="Assets\Scripts\ScenceController\MainMenuScene.cs" />
     <Compile Include="Assets\Scripts\SoldierSystem\SoldierController.cs" />
     <Compile Include="Assets\Scripts\ScenceController\SettingScene.cs" />
     <Compile Include="Assets\Scripts\EnemySystem\Path.cs" />
     <Compile Include="Assets\Scripts\SoldierSystem\LayoutArea.cs" />
-    <Compile Include="Assets\Scripts\ScenceController\StartScene.cs" />
-    <Compile Include="Assets\Scripts\ScenceController\WinOrLoseScene\LoseScene.cs" />
-    <Compile Include="Assets\Scripts\ScenceController\WinOrLoseScene\WinScene.cs" />
+    <Compile Include="Assets\Scripts\MusicController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

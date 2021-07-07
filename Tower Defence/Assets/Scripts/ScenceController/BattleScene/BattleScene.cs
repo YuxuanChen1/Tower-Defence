@@ -42,6 +42,7 @@ public class BattleScene : MonoBehaviour
                 Debug.LogError("找不到游戏控制器");
                 return;
             }
+            gameController.GetButton();
 
             gameController.SetSceneIndex(SceneManager.GetActiveScene().buildIndex);
 

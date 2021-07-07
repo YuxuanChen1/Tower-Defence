@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class LoseScene : MonoBehaviour
 {
+    private void Awake()
+    {
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().GetButton();
+    }
     public void ToChooseScene()
     {
         SceneManager.LoadSceneAsync("ChooseScene");

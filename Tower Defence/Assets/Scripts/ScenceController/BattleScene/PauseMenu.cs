@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private Slider effectVolume;
 
     [SerializeField] private GameController gameController;
+    [SerializeField] private MusicController musicController;
 
     private void Start()
     {
@@ -20,10 +21,12 @@ public class PauseMenu : MonoBehaviour
             Debug.LogError("找不到游戏控制器");
             return;
         }
+
+        musicController = GameObject.FindGameObjectWithTag("GameController").GetComponent<MusicController>();
         {
-            mainVolume.value = gameController.masterVolume;
-            musicVolume.value = gameController.musicVolume;
-            effectVolume.value = gameController.effectVolume;
+            mainVolume.value = musicController.masterVolume;
+            musicVolume.value = musicController.musicVolume;
+            effectVolume.value = musicController.effectVolume;
         }
 
 
@@ -32,9 +35,9 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        gameController.masterVolume = mainVolume.value;
-        gameController.musicVolume = musicVolume.value;
-        gameController.effectVolume = effectVolume.value;
+        musicController.masterVolume = mainVolume.value;
+        musicController.musicVolume = musicVolume.value;
+        musicController.effectVolume = effectVolume.value;
     }
 
     public void ToChooseMenu()

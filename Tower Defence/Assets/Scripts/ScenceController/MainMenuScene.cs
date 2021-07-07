@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScene : MonoBehaviour 
 {
+    private void Awake()
+    {
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().GetButton();
+    }
     public void OnStartGame()
     {
         SceneManager.LoadSceneAsync("ChooseScene");

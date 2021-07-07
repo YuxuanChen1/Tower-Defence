@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 public class WinScene : LoseScene
 {
     [SerializeField] private int lastBattleSceneIndex;
+
+    private void Awake()
+    {
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>().GetButton();
+    }
     public void NextGame()
     {
         GameObject gameController = GameObject.FindGameObjectWithTag("GameController");

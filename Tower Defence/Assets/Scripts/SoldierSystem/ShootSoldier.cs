@@ -9,6 +9,12 @@ public class ShootSoldier : SoldierController
     [SerializeField] float minAttackRange_X;
 
     [SerializeField] GameObject target;
+    [Header("“Ù–ß")]
+    
+    [SerializeField] private AudioSource bowPull;
+    [SerializeField] private AudioSource bowFire;
+
+
     private void Update()
     {
         Debug.DrawRay(transform.position, new Vector2(-1, 0) * attackRange, Color.red);
@@ -31,6 +37,9 @@ public class ShootSoldier : SoldierController
                 anim.SetBool("attack", true);
             }
         }
+
+        SoundEffect();
+
     }
 
     private void FindTarget()
@@ -73,6 +82,20 @@ public class ShootSoldier : SoldierController
             target = null;
             anim.SetBool("attack", false);
         }
+    }
+
+    protected override void SoundEffect()
+    {
+        bowFire.volume = musicController.masterVolume * musicController.effectVolume;
+        bowPull.volume = musicController.masterVolume * musicController.effectVolume;
+    }
+    public void BowPullEffect()
+    {
+        bowPull.Play();
+    }
+    public void BowFireEffect()
+    {
+        bowFire.Play();
     }
 }
 
